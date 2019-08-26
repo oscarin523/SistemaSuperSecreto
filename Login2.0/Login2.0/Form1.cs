@@ -32,6 +32,10 @@ namespace Login2._0
             if(textUser.Text=="Juancho"&& textPassword.Text=="123tamarindo")
             {
                 MessageBox.Show("Bienvenido Sr Don Juancho");
+                this.Hide(); // Escondemos ventana login
+                Ventana2 CursosVentana = new Ventana2();
+                CursosVentana.Show();
+                this.Visible = false;
             }
             else
             {
@@ -40,6 +44,12 @@ namespace Login2._0
                 textPassword.Text = "";
                 textUser.Focus();
             }
+        }
+
+
+        private void TextPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
